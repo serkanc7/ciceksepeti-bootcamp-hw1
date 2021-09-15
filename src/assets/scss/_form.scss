@@ -1,0 +1,43 @@
+.form-sec {
+    display: none;
+    &__active{
+        display: block;
+        flex: 1;
+    }
+
+.form{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 20px;
+
+         &__group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom:20px;
+
+        &--full{
+            grid-column: 1/-1;
+        }
+    }
+
+    &__input,&__textarea{
+        border: none;
+        outline: none;
+        background-color: white;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    &__button-group{
+        grid-column: 1/-1;
+    }
+
+    &__button{
+        float: right;
+    }
+
+    
+
+}
+
+}

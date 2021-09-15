@@ -1,0 +1,22 @@
+.card-list{
+    display: none;
+    &__active{
+        flex: 1;
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(225px,1fr));
+        gap: 20px;
+    }
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px black ;
+    border-radius: 10px;
+    padding: 10px;
+
+    &__img{
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+}

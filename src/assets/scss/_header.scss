@@ -1,0 +1,29 @@
+.header{
+    background-color:$header-bg-color;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid $header-border-color;
+
+    &__search{
+        position: relative;
+
+    }
+
+    &__input{
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        outline: none;
+        border: 2px solid $input-border-color;
+        padding: 10px 10px 10px 25px;
+    }
+
+    &__input-svg{
+        top: 5px;
+        position: absolute;
+        left: 5px;
+    }
+}

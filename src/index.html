@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ipsum</title>
+    <link rel="stylesheet" href="assets/scss/main.scss">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+
+
+<body>
+    <header class="header container">
+        <div class="header__logo">
+            <img src="assets/svg/logo.svg" alt="logo">
+        </div>
+
+        <div class="header__search">
+            <input class="header__input" type="text" placeholder="What are you looking for?" data-search>
+            <img class="header__input-svg" src="assets/svg/search.svg" alt="search">
+        </div>
+        <div class="header__profile">
+            <img src="assets/svg/profile.svg" alt="profile">
+        </div>
+    </header>
+    <div class="wrapper container">
+
+        <nav class="menu">
+            <div class="menu__tab menu__tab--active" tab-card-list data-tab>Card List</div>
+            <div class="menu__tab" tab-form data-tab>Form</div>
+        </nav>
+
+        <section class="card-list card-list__active" data-card-list>
+
+        </section>
+
+        <section class="form-sec" data-form>
+            <form class="form" id="form">
+                <div class="form__group">
+                    <label class="form__label" for="company">Company</label>
+                    <input type="text" id="company" name="company" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="email">Email Adress</label>
+                    <input type="email" id="email" name="email" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="title">Title</label>
+                    <input type="text" id="title" name="title" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" class="form__input" required>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="session">252 Training Session 2021</label>
+                    <select name="session" id="session">
+                        <option value="15-09-2021">15/09/2021</option>
+                        <option value="15-10-2021">15/10/2021</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label class="form__label" for="dietary-req">Dietary Requirements</label>
+                    <input type="text" id="dietary-req" name="dietary-req" class="form__input">
+                </div>
+                <div class="form__group form__group--full">
+                    <label class="form__label" for="expectations">Expectations</label>
+                    <textarea id="expectations" name="expectations" class="form__textarea">
+                </div>
+                <div class="form__button-group">
+                    <button class="form__button" type="submit" data-button>Submit</button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+
+    <div class="modal" data-modal>
+        <div class="modal__content">
+            <span class="modal__close" data-modal-close>&times;</span>
+            <div class="modal__info" data-modal-info>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
