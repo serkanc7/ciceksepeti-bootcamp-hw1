@@ -17,6 +17,11 @@
     border: 1px solid $modal-border-color;
     width: 80%; /* Could be more or less, depending on screen size */
     border-radius: 30px;
+    
+  }
+
+  p{
+    word-break: break-all;
   }
 
   &__close {
