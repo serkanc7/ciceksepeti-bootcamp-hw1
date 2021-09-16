@@ -23,6 +23,7 @@ function generateApp(data) {
         }
         tabEl.addEventListener("click", showCurrentTab)
 
+        //Show current tab
         function showCurrentTab() {
             let prevTabEl = document.querySelector(".menu__tab--active");
             prevTabEl.classList.remove('menu__tab--active');
@@ -37,6 +38,7 @@ function generateApp(data) {
 
     })
 
+    //Search data when search element changed
     let searchEl = document.querySelector('[data-search]');
     let searchInput = "";
     searchEl.addEventListener('change', searchData);
@@ -54,7 +56,7 @@ function generateApp(data) {
         }
     }
 
-
+    //Show modal and close modal
     let form = document.querySelector('#form');
     let formButton = document.querySelector('[data-button]');
     let modal = document.querySelector('[data-modal]');
@@ -80,8 +82,8 @@ function generateApp(data) {
     }
 }
 
+//Show card list when clicked card list
 function showCardList(data) {
-    console.log(data);
     let cardListEl = document.querySelector('[data-card-list]');
     let prevSectionEl = document.querySelector(".form-sec__active");
     if (prevSectionEl) {
@@ -98,6 +100,7 @@ function showCardList(data) {
 
 }
 
+//create Card Elements
 function generateCardEl(item, index, cardListEl) {
     const cardEl = document.createElement('div');
     cardEl.classList.add('card');
@@ -118,7 +121,7 @@ function generateCardEl(item, index, cardListEl) {
     cardListEl.appendChild(cardEl);
 }
 
-
+//Show form when clicked form
 function showForm() {
     let formEl = document.querySelector('[data-form]');
     let prevSectionEl = document.querySelector(".card-list__active");
@@ -127,8 +130,6 @@ function showForm() {
         formEl.classList.add('form-sec__active');
     }
 }
-
-
 
 async function init() {
     const data = await getData();
