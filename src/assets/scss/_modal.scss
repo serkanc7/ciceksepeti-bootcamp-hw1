@@ -11,10 +11,10 @@
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 
   &__content{
-    background-color: #fefefe;
+    background-color:$modal-bg-color;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid $modal-border-color;
     width: 80%; /* Could be more or less, depending on screen size */
     border-radius: 30px;
   }

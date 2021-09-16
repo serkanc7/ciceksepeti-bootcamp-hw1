@@ -1,6 +1,6 @@
 .card-list{
     display: none;
-    &__active{
+    &--active{
         flex: 1;
         display: grid;
         grid-template-columns:repeat(auto-fill,minmax(225px,1fr));

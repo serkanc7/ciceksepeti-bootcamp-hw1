@@ -85,11 +85,11 @@ function generateApp(data) {
 //Show card list when clicked card list
 function showCardList(data) {
     let cardListEl = document.querySelector('[data-card-list]');
-    let prevSectionEl = document.querySelector(".form-sec__active");
+    let prevSectionEl = document.querySelector(".form-sec--active");
     if (prevSectionEl) {
-        prevSectionEl.classList.remove('form-sec__active');
+        prevSectionEl.classList.remove('form-sec--active');
     }
-    cardListEl.classList.add('card-list__active');
+    cardListEl.classList.add('card-list--active');
     cardListEl.innerHTML = "";
 
     if (!(data.length === undefined)) {
@@ -124,10 +124,10 @@ function generateCardEl(item, index, cardListEl) {
 //Show form when clicked form
 function showForm() {
     let formEl = document.querySelector('[data-form]');
-    let prevSectionEl = document.querySelector(".card-list__active");
+    let prevSectionEl = document.querySelector(".card-list--active");
     if (prevSectionEl) {
-        prevSectionEl.classList.remove('card-list__active');
-        formEl.classList.add('form-sec__active');
+        prevSectionEl.classList.remove('card-list--active');
+        formEl.classList.add('form-sec--active');
     }
 }
 
