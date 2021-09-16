@@ -71,6 +71,7 @@ function generateApp(data) {
         for (let [name, value] of formData) {
             console.log(name, value);
             const modalTextEl = document.createElement('p');
+            modalTextEl.classList.add('modal__text');
             modalTextEl.innerHTML = `<b>${name}</b> = ${value}`
             modalInfo.appendChild(modalTextEl);
         }
