@@ -10,6 +10,10 @@
         grid-template-columns: repeat(2,1fr);
         column-gap: 20px;
 
+        @include mq(tablet,max){
+            grid-template-columns: 1fr;
+        }
+
          &__group{
         display: flex;
         flex-direction: column;
@@ -20,7 +24,11 @@
         }
     }
 
-    &__input,&__textarea{
+    &__label{
+        margin-bottom: 5px;
+    }
+
+    &__input,&__textarea,&__select{
         border: none;
         outline: none;
         background-color: white;
@@ -35,9 +43,5 @@
     &__button{
         float: right;
     }
-
-    
-
 }
-
 }

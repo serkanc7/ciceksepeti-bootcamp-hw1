@@ -1,18 +1,32 @@
 .menu {
+    display: flex;
+    flex-direction: column;
     flex-basis: 200px;
     margin-right: 20px;
+    @include mq(tablet,max){
+        flex-basis: 0;
+        margin-right: 0;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
 
     &__tab{
         cursor: pointer;
         padding: 10px;
         border-radius: 10px;
+        background-color: $tab-bg-color;
+        color:$tab-color;
 
         &--active{
-            background-color: $tab-hover-bg-color;
+            background-color: $tab-active-bg-color;
         }
         
         &:first-child{
             margin-bottom: 10px;
+            @include mq(tablet,max){
+                margin-bottom: 0;
+                margin-right: 10px;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 import regeneratorRuntime from "regenerator-runtime";
 
-
+//Get data from api
 const getData = async () => {
     try {
         const results = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -11,15 +11,19 @@ const getData = async () => {
     }
 };
 
-function generateMain(data) {
+//Generate app
+function generateApp(data) {
     const tabElements = document.querySelectorAll('[data-tab]');
     let cardListTabEl = document.querySelector('[tab-card-list]');
 
+    //Show current tab when button is clicked 
     tabElements.forEach((tabEl, index) => {
         if (index === 0) {
             showCardList(data);
         }
-        tabEl.addEventListener("click", function () {
+        tabEl.addEventListener("click", showCurrentTab)
+
+        function showCurrentTab() {
             let prevTabEl = document.querySelector(".menu__tab--active");
             prevTabEl.classList.remove('menu__tab--active');
             this.classList.add('menu__tab--active');
@@ -29,13 +33,14 @@ function generateMain(data) {
             if (this.innerText === "Form") {
                 showForm();
             }
-        })
+        }
+
     })
 
     let searchEl = document.querySelector('[data-search]');
     let searchInput = "";
-
-    searchEl.addEventListener('change', function (e) {
+    searchEl.addEventListener('change', searchData);
+    function searchData(e) {
         let prevTabEl = document.querySelector(".menu__tab--active");
         prevTabEl.classList.remove('menu__tab--active');
         cardListTabEl.classList.add('menu__tab--active');
@@ -47,7 +52,8 @@ function generateMain(data) {
         else {
             showCardList(data);
         }
-    });
+    }
+
 
     let form = document.querySelector('#form');
     let formButton = document.querySelector('[data-button]');
@@ -84,7 +90,7 @@ function showCardList(data) {
     cardListEl.classList.add('card-list__active');
     cardListEl.innerHTML = "";
 
-    if (data.length) {
+    if (!(data.length === undefined)) {
         data.slice(0, 10).forEach((item, index) => {
             generateCardEl(item, index, cardListEl);
         })
@@ -126,7 +132,7 @@ function showForm() {
 
 async function init() {
     const data = await getData();
-    generateMain(data);
+    generateApp(data);
 }
 
 init();

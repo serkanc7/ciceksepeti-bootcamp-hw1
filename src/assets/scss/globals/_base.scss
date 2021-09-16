@@ -12,11 +12,36 @@ html, body {
 .container {
     padding-right: 150px;
     padding-left:150px ;
-    margin-bottom: 50px;
+
+    @include mq(desktop,max){
+        padding-right: 100px;
+        padding-left:100px ;
+    }
+
+    @include mq(tablet-xl,max){
+        padding-right: 75px;
+        padding-left:75px ;
+    }
+
+    @include mq(tablet,max){
+        padding-right: 25px;
+        padding-left:25px ;
+    }
+
+    @include mq(mobile,max){
+        padding-right: 10px;
+        padding-left:10px ;
+    }
 }
 
 .wrapper{
     display: flex;
     margin-top: 30px;
+    margin-bottom: 50px;
+
+    @include mq(tablet,max){
+        flex-direction: column;
+        margin-top: 10px;
+    }
 }
 

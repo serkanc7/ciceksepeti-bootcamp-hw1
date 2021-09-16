@@ -7,8 +7,19 @@
     align-items: center;
     border-bottom: 3px solid $header-border-color;
 
+    &__logo{
+        text-decoration: none;
+    }
+
+    &__logo-img{
+        @include mq(tablet,max){
+        width: 75px;
+    }
+    }
+
     &__search{
         position: relative;
+        margin: 0 10px;
 
     }
 
@@ -25,5 +36,13 @@
         top: 5px;
         position: absolute;
         left: 5px;
+    }
+
+    &__profile{
+        text-decoration: none;
+    }
+
+    &__profile-img{
+        width: 30px;
     }
 }
